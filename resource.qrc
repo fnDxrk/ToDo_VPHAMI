@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>resource/icons/Calendar.png</file>
+        <file>resource/icons/Menu.png</file>
+        <file>resource/icons/Sun.png</file>
+        <file>resource/icons/Tasks.png</file>
+    </qresource>
+</RCC>
