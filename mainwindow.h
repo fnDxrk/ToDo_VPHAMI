@@ -19,5 +19,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void showFullMenu();    // Слот для отображения full_menu_widget
+    void showIconMenu();    // Слот для отображения icom_menu_widget
 };
 #endif // MAINWINDOW_H

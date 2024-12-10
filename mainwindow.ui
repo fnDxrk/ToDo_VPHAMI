@@ -105,6 +105,9 @@
     </item>
     <item row="0" column="0">
      <widget class="QWidget" name="icon_menu_widget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <property name="spacing">
         <number>0</number>
@@ -229,6 +232,9 @@
     </item>
     <item row="0" column="1">
      <widget class="QWidget" name="full_menu_widget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <property name="spacing">
         <number>0</number>
@@ -263,6 +269,9 @@
                <width>32</width>
                <height>32</height>
               </size>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
              </property>
             </widget>
            </item>
@@ -377,5 +386,38 @@
  <resources>
   <include location="resource.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>full_menu_toggle_button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_menu_widget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>34</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>icon_menu_toggle_button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>full_menu_widget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
