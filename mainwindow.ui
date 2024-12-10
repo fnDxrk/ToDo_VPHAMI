@@ -190,7 +190,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="icon_menu_tasks_button">
            <property name="text">
             <string/>
            </property>
@@ -420,7 +420,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>icon_menu_tasks_button</sender>
    <signal>toggled(bool)</signal>
    <receiver>full_menu_tasks_button</receiver>
    <slot>setChecked(bool)</slot>
@@ -470,7 +470,7 @@
   <connection>
    <sender>full_menu_tasks_button</sender>
    <signal>toggled(bool)</signal>
-   <receiver>pushButton_4</receiver>
+   <receiver>icon_menu_tasks_button</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
