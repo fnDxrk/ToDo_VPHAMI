@@ -386,38 +386,5 @@
  <resources>
   <include location="resource.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>full_menu_toggle_button</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>icon_menu_widget</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>72</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>34</x>
-     <y>190</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>icon_menu_toggle_button</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>full_menu_widget</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>21</x>
-     <y>23</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>64</x>
-     <y>219</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
