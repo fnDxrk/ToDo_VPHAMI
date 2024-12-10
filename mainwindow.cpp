@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Скрываем меню с иконками
     showFullMenu();
 
-    // Подключение сигналов и слотов
+    // Подключение сигналов и слотов для переключения меню
     connect(ui->icon_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showFullMenu);
     connect(ui->full_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showIconMenu);
 
@@ -30,25 +30,29 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+// Слот для отображения полного меню
 void MainWindow::showFullMenu() {
     ui->full_menu_widget->show();
     ui->icon_menu_widget->hide();
 }
 
+// Слот для отображения меню с иконками
 void MainWindow::showIconMenu() {
     ui->full_menu_widget->hide();
     ui->icon_menu_widget->show();
 }
 
-// Эти слоты переключают страницы в QStackedWidget
+// Слот для переключения на страницу "Today"
 void MainWindow::showTodayPage() {
-    ui->stackedWidget->setCurrentWidget(ui->today_page);  // Переходим на страницу today_page
+    ui->stackedWidget->setCurrentWidget(ui->today_page);
 }
 
+// Слот для переключения на страницу "Calendar"
 void MainWindow::showCalendarPage() {
-    ui->stackedWidget->setCurrentWidget(ui->calendar_page);  // Переходим на страницу calendar_page
+    ui->stackedWidget->setCurrentWidget(ui->calendar_page);
 }
 
+// Слот для переключения на страницу "Tasks"
 void MainWindow::showTasksPage() {
-    ui->stackedWidget->setCurrentWidget(ui->tasks_page);  // Переходим на страницу tasks_page
+    ui->stackedWidget->setCurrentWidget(ui->tasks_page);
 }
