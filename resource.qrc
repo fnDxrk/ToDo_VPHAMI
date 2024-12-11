@@ -5,4 +5,7 @@
         <file>resource/icons/Sun.png</file>
         <file>resource/icons/Tasks.png</file>
     </qresource>
+    <qresource prefix="/qss">
+        <file>resource/style.qss</file>
+    </qresource>
 </RCC>
