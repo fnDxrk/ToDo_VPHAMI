@@ -257,7 +257,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Menu.png</normaloff>:/icons/resource/icons/Menu.png</iconset>
+             <normaloff>:/resource/icons/Menu.png</normaloff>:/resource/icons/Menu.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -274,7 +274,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Sun.png</normaloff>:/icons/resource/icons/Sun.png</iconset>
+             <normaloff>:/resource/icons/Sun.png</normaloff>:/resource/icons/Sun.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -297,7 +297,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Calendar.png</normaloff>:/icons/resource/icons/Calendar.png</iconset>
+             <normaloff>:/resource/icons/Calendar.png</normaloff>:/resource/icons/Calendar.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -320,7 +320,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Tasks.png</normaloff>:/icons/resource/icons/Tasks.png</iconset>
+             <normaloff>:/resource/icons/Tasks.png</normaloff>:/resource/icons/Tasks.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -386,7 +386,7 @@
              </property>
              <property name="icon">
               <iconset resource="resource.qrc">
-               <normaloff>:/icons/resource/icons/Menu.png</normaloff>:/icons/resource/icons/Menu.png</iconset>
+               <normaloff>:/resource/icons/Menu.png</normaloff>:/resource/icons/Menu.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -424,7 +424,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Sun.png</normaloff>:/icons/resource/icons/Sun.png</iconset>
+             <normaloff>:/resource/icons/Sun.png</normaloff>:/resource/icons/Sun.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -447,7 +447,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Calendar.png</normaloff>:/icons/resource/icons/Calendar.png</iconset>
+             <normaloff>:/resource/icons/Calendar.png</normaloff>:/resource/icons/Calendar.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -470,7 +470,7 @@
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
-             <normaloff>:/icons/resource/icons/Tasks.png</normaloff>:/icons/resource/icons/Tasks.png</iconset>
+             <normaloff>:/resource/icons/Tasks.png</normaloff>:/resource/icons/Tasks.png</iconset>
            </property>
            <property name="iconSize">
             <size>
