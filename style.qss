@@ -4,3 +4,14 @@
     font-size: 16px;
     font-weight: medium;
 }
+
+/* Фон основного окна */
+#MainWindow {
+    background-color: #f4f4f4;
+}
+
+/* Фон для меню */
+#full_menu_widget,
+#icon_menu_widget {
+    background-color: #ffffff;
+}
