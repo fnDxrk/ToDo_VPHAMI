@@ -29,12 +29,8 @@
     border: none;
     text-align: left;
     padding: 10px;
-}
-
-/* Размер иконок для календарных кнопок */
-#icon_menu_calendar_button,
-#full_menu_calendar_button {
-    qproperty-iconSize: 28px;
+    height: 32px;
+    width: 200px;
 }
 
 /* Стиль при наведении на кнопку */
