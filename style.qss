@@ -33,6 +33,10 @@
     width: 200px;
 }
 
+#full_menu_widget QPushButton::icon {
+    margin-right: 30px;
+}
+
 /* Стиль при наведении на кнопку */
 #full_menu_widget QPushButton:hover,
 #icon_menu_widget QPushButton:hover {
