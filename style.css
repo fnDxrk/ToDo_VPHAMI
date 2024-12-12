@@ -86,3 +86,11 @@
 #tasks_page #tasks_complete_widget *{
     background-color: transparent;
 }
+
+/* Зачёркнутый текст виджетов событий и задач, которые выполнены */
+#event_complete_text,
+#tasks_complete_text {
+    text-decoration: line-through;
+}
+
+
