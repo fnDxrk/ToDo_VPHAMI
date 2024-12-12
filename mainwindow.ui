@@ -905,7 +905,7 @@
             <number>20</number>
            </property>
            <item>
-            <widget class="QWidget" name="task_widget" native="true">
+            <widget class="QWidget" name="tasks_widget" native="true">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -929,7 +929,7 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QPushButton" name="task_plus_button">
+               <widget class="QPushButton" name="tasks_plus_button">
                 <property name="text">
                  <string/>
                 </property>
@@ -962,7 +962,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="task_text">
+               <widget class="QLabel" name="tasks_text">
                 <property name="text">
                  <string>Постирать вещи</string>
                 </property>
@@ -982,7 +982,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="task_options_button">
+               <widget class="QPushButton" name="tasks_options_button">
                 <property name="text">
                  <string/>
                 </property>
@@ -1082,6 +1082,103 @@
             </widget>
            </item>
            <item>
+            <widget class="QWidget" name="completed_tasks_widget" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>20</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>20</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="completed_tasks_arrow_right_button">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/resource/icons/Arrow_right.png</normaloff>:/resource/icons/Arrow_right.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_16">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>10</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="completed_tasks_text">
+                <property name="text">
+                 <string>Завершённые</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_17">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>898</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="completed_tasks_trash_button">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/resource/icons/Trash.png</normaloff>:/resource/icons/Trash.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <spacer name="verticalSpacer_5">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -1089,7 +1186,7 @@
              <property name="sizeHint" stdset="0">
               <size>
                <width>20</width>
-               <height>431</height>
+               <height>351</height>
               </size>
              </property>
             </spacer>
