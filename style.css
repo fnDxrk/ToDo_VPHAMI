@@ -69,7 +69,7 @@
 }
 
 /* Фон для виджетов события*/
-#event_widget {
+#today_page QWidget {
     background-color: #ffffff;
 }
 
