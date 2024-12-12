@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
     // Скрываем меню с иконками
     showFullMenu();
 
+    // Делаем по умолчанию страницу Today в меню
+    ui->full_menu_today_button->setChecked(true);
+
     // Подключение сигналов и слотов для переключения меню
     connect(ui->icon_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showFullMenu);
     connect(ui->full_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showIconMenu);
