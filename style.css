@@ -14,6 +14,7 @@
 #full_menu_widget,
 #icon_menu_widget {
     background-color: #ffffff;
+    border-right: 1px solid #000;
 }
 
 /* Стиль кнопок в меню с иконками */
