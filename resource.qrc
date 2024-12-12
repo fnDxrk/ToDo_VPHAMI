@@ -9,5 +9,7 @@
         <file>icons/Complete.png</file>
         <file>icons/Plus.png</file>
         <file>icons/Options.png</file>
+        <file>icons/Arrow_right.png</file>
+        <file>icons/Trash.png</file>
     </qresource>
 </RCC>
