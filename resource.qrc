@@ -5,5 +5,9 @@
         <file>icons/Sun.png</file>
         <file>icons/Tasks.png</file>
         <file>style.css</file>
+        <file>icons/Circle.png</file>
+        <file>icons/Complete.png</file>
+        <file>icons/Plus.png</file>
+        <file>icons/Options.png</file>
     </qresource>
 </RCC>
