@@ -5,6 +5,10 @@
     font-weight: medium;
 }
 
+* QPushButton {
+    border:none;
+}
+
 /* Фон основного окна */
 #MainWindow {
     background-color: #f4f4f4;
@@ -19,7 +23,6 @@
 
 /* Стиль кнопок в меню с иконками */
 #icon_menu_widget QPushButton {
-    border: none;
     padding: 10px;
     width: 32px;
     height: 32px;
@@ -27,7 +30,6 @@
 
 /* Стиль кнопок в полном меню */
 #full_menu_widget QPushButton {
-    border: none;
     text-align: left;
     padding: 10px;
     height: 32px;
