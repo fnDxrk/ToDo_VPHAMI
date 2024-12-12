@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     showFullMenu();
 
     // Делаем по умолчанию страницу Today в меню
+    ui->stackedWidget->setCurrentIndex(0);
     ui->full_menu_today_button->setChecked(true);
 
     // Подключение сигналов и слотов для переключения меню
