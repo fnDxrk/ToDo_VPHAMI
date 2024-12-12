@@ -40,10 +40,17 @@
     border: 1px solid #000;
 }
 
+/* Убираем стиль для кнопки меню */
+#full_menu_widget #full_menu_toggle_button:hover,
+#icon_menu_widget #icon_menu_toggle_button:hover {
+    background-color: none;
+    border: none;
+}
+
 /* Стиль при выбранной кнопки */
 #full_menu_widget QPushButton:checked,
 #icon_menu_widget QPushButton:checked {
-    background-color: rgba(44, 128, 255, 0.5);
+    background-color: rgba(40, 128, 255, 0.5);
     border: 1px solid #000;
 }
 
