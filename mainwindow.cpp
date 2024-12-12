@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentIndex(0);
     ui->full_menu_today_button->setChecked(true);
 
+    // Скрываем кнопку календаря
+    ui->calendar_button->setVisible(0);
+
     // Подключение сигналов и слотов для переключения меню
     connect(ui->icon_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showFullMenu);
     connect(ui->full_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showIconMenu);
@@ -49,14 +52,17 @@ void MainWindow::showIconMenu() {
 // Слот для переключения на страницу "Today"
 void MainWindow::showTodayPage() {
     ui->stackedWidget->setCurrentWidget(ui->today_page);
+    ui->calendar_button->setVisible(0);
 }
 
 // Слот для переключения на страницу "Plans"
 void MainWindow::showPlansPage() {
     ui->stackedWidget->setCurrentWidget(ui->plans_page);
+    ui->calendar_button->setVisible(1);
 }
 
 // Слот для переключения на страницу "Tasks"
 void MainWindow::showTasksPage() {
     ui->stackedWidget->setCurrentWidget(ui->tasks_page);
+    ui->calendar_button->setVisible(0);
 }
