@@ -4,6 +4,6 @@
         <file>icons/Menu.png</file>
         <file>icons/Sun.png</file>
         <file>icons/Tasks.png</file>
-        <file>style.qss</file>
+        <file>style.css</file>
     </qresource>
 </RCC>
