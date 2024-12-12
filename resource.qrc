@@ -11,5 +11,6 @@
         <file>icons/Options.png</file>
         <file>icons/Arrow_right.png</file>
         <file>icons/Trash.png</file>
+        <file>icons/Arrow_down.png</file>
     </qresource>
 </RCC>

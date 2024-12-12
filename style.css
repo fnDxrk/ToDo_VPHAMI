@@ -73,3 +73,12 @@
     background-color: #ffffff;
 }
 
+/* */
+
+#today_page #event_complete_widget {
+    background-color: #eaeaea;
+}
+
+#today_page #event_complete_widget *{
+    background-color: transparent;
+}
