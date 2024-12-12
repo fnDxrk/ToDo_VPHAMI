@@ -94,7 +94,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="icon_menu_calendar_button">
+          <widget class="QPushButton" name="icon_menu_plans_button">
            <property name="text">
             <string/>
            </property>
@@ -224,9 +224,9 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="full_menu_calendar_button">
+          <widget class="QPushButton" name="full_menu_plans_button">
            <property name="text">
-            <string>Календарь</string>
+            <string>Планы</string>
            </property>
            <property name="icon">
             <iconset resource="resource.qrc">
@@ -351,7 +351,7 @@
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="today_page">
           <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -662,7 +662,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="calendar_page">
+         <widget class="QWidget" name="plans_page">
           <layout class="QGridLayout" name="gridLayout_2">
            <property name="leftMargin">
             <number>0</number>
@@ -691,7 +691,7 @@
               <bool>false</bool>
              </property>
              <property name="text">
-              <string>Calendar page</string>
+              <string>Plans page</string>
              </property>
              <property name="scaledContents">
               <bool>false</bool>
@@ -776,9 +776,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>icon_menu_calendar_button</sender>
+   <sender>icon_menu_plans_button</sender>
    <signal>toggled(bool)</signal>
-   <receiver>full_menu_calendar_button</receiver>
+   <receiver>full_menu_plans_button</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -824,9 +824,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>full_menu_calendar_button</sender>
+   <sender>full_menu_plans_button</sender>
    <signal>toggled(bool)</signal>
-   <receiver>icon_menu_calendar_button</receiver>
+   <receiver>icon_menu_plans_button</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">

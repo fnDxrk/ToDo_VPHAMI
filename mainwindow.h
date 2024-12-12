@@ -24,7 +24,7 @@ private slots:
     void showFullMenu();        // Слот для отображения full_menu_widget
     void showIconMenu();        // Слот для отображения icom_menu_widget
     void showTodayPage();       // Слот для преключения на страницу today_page
-    void showCalendarPage();    // Слот для преключения на страницу calendar_page
+    void showPlansPage();    // Слот для преключения на страницу calendar_page
     void showTasksPage();       // Слот для преключения на страницу tasks_page
 };
 #endif // MAINWINDOW_H

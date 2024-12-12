@@ -21,8 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->icon_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
     connect(ui->full_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
 
-    connect(ui->icon_menu_calendar_button, &QPushButton::clicked, this, &MainWindow::showCalendarPage);
-    connect(ui->full_menu_calendar_button, &QPushButton::clicked, this, &MainWindow::showCalendarPage);
+    connect(ui->icon_menu_plans_button, &QPushButton::clicked, this, &MainWindow::showPlansPage);
+    connect(ui->full_menu_plans_button, &QPushButton::clicked, this, &MainWindow::showPlansPage);
 
     connect(ui->icon_menu_tasks_button, &QPushButton::clicked, this, &MainWindow::showTasksPage);
     connect(ui->full_menu_tasks_button, &QPushButton::clicked, this, &MainWindow::showTasksPage);
@@ -50,9 +50,9 @@ void MainWindow::showTodayPage() {
     ui->stackedWidget->setCurrentWidget(ui->today_page);
 }
 
-// Слот для переключения на страницу "Calendar"
-void MainWindow::showCalendarPage() {
-    ui->stackedWidget->setCurrentWidget(ui->calendar_page);
+// Слот для переключения на страницу "Plans"
+void MainWindow::showPlansPage() {
+    ui->stackedWidget->setCurrentWidget(ui->plans_page);
 }
 
 // Слот для переключения на страницу "Tasks"
