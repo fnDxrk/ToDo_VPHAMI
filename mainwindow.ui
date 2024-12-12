@@ -380,19 +380,6 @@
              <number>0</number>
             </property>
             <item>
-             <spacer name="horizontalSpacer_6">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>211</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
              <widget class="QPushButton" name="event_circle_button">
               <property name="text">
                <string/>
@@ -414,9 +401,12 @@
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>210</width>
+                <width>10</width>
                 <height>20</height>
                </size>
               </property>
@@ -436,7 +426,7 @@
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>211</width>
+                <width>838</width>
                 <height>20</height>
                </size>
               </property>
@@ -458,19 +448,6 @@
                </size>
               </property>
              </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>210</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </widget>
