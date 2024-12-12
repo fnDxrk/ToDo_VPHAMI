@@ -70,7 +70,8 @@
 
 /* Фон для виджетов событий, планов или задач */
 #today_page QWidget,
-#plans_page QWidget {
+#plans_page QWidget,
+#tasks_page QWidget {
     background-color: #ffffff;
 }
 
