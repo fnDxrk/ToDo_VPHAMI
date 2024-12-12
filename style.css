@@ -68,19 +68,21 @@
     margin: 0 30px 0 30px;
 }
 
-/* Фон для виджетов событий, планов или задач */
+/* Фон виджетов событий, планов или задач */
 #today_page QWidget,
 #plans_page QWidget,
 #tasks_page QWidget {
     background-color: #ffffff;
 }
 
-/* Фон для виджетов события, которые выполнены*/
-
-#today_page #event_complete_widget {
+/* Фон виджетов событий и задач, которые выполнены*/
+#today_page #event_complete_widget,
+#tasks_page #tasks_complete_widget {
     background-color: #eaeaea;
 }
 
-#today_page #event_complete_widget *{
+/* Фон элементов виджетов событий и задач, которые выполнены*/
+#today_page #event_complete_widget *,
+#tasks_page #tasks_complete_widget *{
     background-color: transparent;
 }
