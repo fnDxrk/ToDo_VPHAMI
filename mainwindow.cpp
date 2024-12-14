@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +17,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Скрываем кнопку календаря
     ui->calendar_button->setVisible(0);
+
+    // Создадим календарь
+    calendarWidget = new QCalendarWidget(this);
+    calendarWidget->setVisible(false);
+    calendarWidget->setGeometry(1010, 98, 250, 250);
+
+    // Подключаем кнопку календаря к слоту отображения календаря
+    connect(ui->calendar_button, &QPushButton::clicked, this, &MainWindow::showCalendar);
 
     // Подключение сигналов и слотов для переключения меню
     connect(ui->icon_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showFullMenu);
@@ -68,4 +77,27 @@ void MainWindow::showTasksPage() {
     ui->stackedWidget->setCurrentWidget(ui->tasks_page);
     ui->calendar_button->setVisible(0);
     ui->title_text->setContentsMargins(0,0,0,0);
+}
+
+// Слот для отображения или скрытия календаря
+void MainWindow::showCalendar() {
+    if (calendarWidget->isVisible()) {
+        calendarWidget->setVisible(0);
+    } else {
+        calendarWidget->setVisible(1);
+    }
+}
+
+// Функция для обновления расположения календаря
+void MainWindow::updateCalendarPosition() {
+    int calendarWidth = calendarWidget->width();
+    int windowWidth = this->width();
+    int newXPosition = windowWidth - calendarWidth - calendarMargin;
+    calendarWidget->move(newXPosition, calendarWidget->y());
+}
+
+// Функция для обработки изменения окна
+void MainWindow::resizeEvent(QResizeEvent *event) {
+    updateCalendarPosition();
+    QWidget::resizeEvent(event);
 }
