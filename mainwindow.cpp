@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,10 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
     // Скрываем кнопку календаря
     ui->calendar_button->setVisible(0);
 
-    // Создадим календарь
+    // Создаём календарь
     calendarWidget = new QCalendarWidget(this);
+    calendarWidget->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
     calendarWidget->setVisible(false);
-    calendarWidget->setGeometry(1010, 98, 250, 250);
+    calendarWidget->setGeometry(1010, 98, 280, 280);
 
     // Подключаем кнопку календаря к слоту отображения календаря
     connect(ui->calendar_button, &QPushButton::clicked, this, &MainWindow::showCalendar);

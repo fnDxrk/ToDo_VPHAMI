@@ -90,4 +90,131 @@
     text-decoration: line-through;
 }
 
+/* Стиль для всего виджета календаря */
+QCalendarWidget * {
+    border: none;
+    text-transform: uppercase;
+}
 
+/* Стиль для календаря (представление дней и месяцев) */
+#qt_calendar_calendarview {
+    background-color: #ffffff;
+    alternate-background-color: #ffffff;
+    color: #000000;
+
+    border: 2px solid #000;
+    border-top: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    padding: 0px 20px 16px 20px;
+}
+
+/* Стиль для элементов (дней) в календаре */
+#qt_calendar_calendarview::item {
+    selection-background-color: #000000;
+}
+
+/* Стиль для текста и фона всех элементов (дней) в календаре */
+#qt_calendar_calendarview::item * {
+    color: #ffffff;
+    background-color: #000000;
+    selection-background-color: #000000;
+}
+
+/* Стиль для элемента календаря при наведении курсора */
+#qt_calendar_calendarview::item:hover {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    selection-background-color: #000000;
+}
+
+/* Стиль для выделенного элемента (дня) в календаре */
+#qt_calendar_calendarview::item:selected {
+    color: #ffffff;
+    background-color: #000000;
+    selection-background-color: #ffffff;
+}
+
+/* Стиль для панели навигации календаря */
+#qt_calendar_navigationbar {
+    background-color: #ffffff;
+    color: #000000;
+
+    border: 2px solid #000;
+    border-bottom: none;
+
+    min-height: 60px;
+    text-align: center;
+}
+
+/* Стиль для кнопок перехода между месяцами (влево и вправо) */
+#qt_calendar_prevmonth,
+#qt_calendar_nextmonth {
+    qproperty-icon: none;
+    qproperty-iconSize: 16px 16px;
+}
+
+/* Стиль для кнопки перехода к предыдущему месяцу */
+#qt_calendar_prevmonth {
+    padding-left: 20px;
+    image: url(:/resource/icons/Arrow_l.png);
+}
+
+/* Стиль для кнопки перехода к следующему месяцу */
+#qt_calendar_nextmonth {
+    padding-right: 20px;
+    image: url(:/resource/icons/Arrow_r.png);
+}
+
+/* Стиль для кнопок выбора года и месяца */
+#qt_calendar_yearbutton,
+#qt_calendar_monthbutton {
+    color: #000000;
+    padding: 0 -7px;
+}
+
+/* Стиль для поля ввода года в календаре */
+#qt_calendar_yearedit {
+    color: #000000;
+    background: transparent;
+    min-width: 70px;
+    selection-background-color: #000000;
+}
+
+/* Стиль для кнопок "вверх" и "вниз" в поле ввода года */
+#qt_calendar_yearedit::down-button,
+#qt_calendar_yearedit::up-button {
+    height: 20px;
+    width: 20px;
+}
+
+/* Стиль для кнопки "вниз" в поле ввода года */
+#qt_calendar_yearedit::down-button {
+    image: url(:/resource/icons/Arrow_down.png);
+    subcontrol-position: right;
+}
+
+/* Стиль для кнопки "вверх" в поле ввода года */
+#qt_calendar_yearedit::up-button {
+    image: url(:/resource/icons/Arrow_up.png);
+    subcontrol-position: left;
+}
+
+/* Стиль для выпадающего меню в кнопке календаря */
+QCalendarWidget QToolButton QMenu {
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
+
+/* Стиль для выделенного пункта в выпадающем меню */
+QCalendarWidget QToolButton QMenu::item:selected:enabled {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Стиль для иконки меню на кнопке календаря */
+QCalendarWidget QToolButton::menu-indicator {
+    image: none;
+}
