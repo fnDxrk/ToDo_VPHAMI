@@ -76,20 +76,17 @@
 }
 
 /* Фон виджетов событий и задач, которые выполнены*/
-#today_page #event_complete_widget,
-#tasks_page #tasks_complete_widget {
+#today_page #event_complete_widget {
     background-color: #eaeaea;
 }
 
 /* Фон элементов виджетов событий и задач, которые выполнены*/
-#today_page #event_complete_widget *,
-#tasks_page #tasks_complete_widget *{
+#today_page #event_complete_widget *{
     background-color: transparent;
 }
 
 /* Зачёркнутый текст виджетов событий и задач, которые выполнены */
-#event_complete_text,
-#tasks_complete_text {
+#event_complete_text {
     text-decoration: line-through;
 }
 
