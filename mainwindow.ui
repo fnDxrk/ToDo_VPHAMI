@@ -325,6 +325,9 @@
           </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
              <spacer name="horizontalSpacer">
               <property name="orientation">
@@ -342,6 +345,15 @@
              <widget class="QLabel" name="title_text">
               <property name="text">
                <string>Сегодня</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+              <property name="margin">
+               <number>0</number>
               </property>
              </widget>
             </item>
@@ -383,7 +395,7 @@
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="today_page">
           <layout class="QVBoxLayout" name="verticalLayout_6">

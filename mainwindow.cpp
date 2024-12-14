@@ -53,16 +53,19 @@ void MainWindow::showIconMenu() {
 void MainWindow::showTodayPage() {
     ui->stackedWidget->setCurrentWidget(ui->today_page);
     ui->calendar_button->setVisible(0);
+    ui->title_text->setContentsMargins(0,0,0,0);
 }
 
 // Слот для переключения на страницу "Plans"
 void MainWindow::showPlansPage() {
     ui->stackedWidget->setCurrentWidget(ui->plans_page);
     ui->calendar_button->setVisible(1);
+    ui->title_text->setContentsMargins(52,0,0,0);
 }
 
 // Слот для переключения на страницу "Tasks"
 void MainWindow::showTasksPage() {
     ui->stackedWidget->setCurrentWidget(ui->tasks_page);
     ui->calendar_button->setVisible(0);
+    ui->title_text->setContentsMargins(0,0,0,0);
 }
