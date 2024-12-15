@@ -76,24 +76,24 @@
 }
 
 /* Фон виджетов событий и задач, которые выполнены*/
-#today_page #event_complete_widget {
+/*#today_page #event_complete_widget {
     background-color: #eaeaea;
-}
+}*/
 
 /* Фон элементов виджетов событий и задач, которые выполнены*/
-#today_page #event_complete_widget *{
+/*#today_page #event_complete_widget *{
     background-color: transparent;
-}
+}*/
 
 /* Фон элементов виджетов событий и задач, которые выполнены*/
-#today_page QLineEdit {
+/*#today_page QLineEdit {
     border:none;
-}
+}*/
 
 /* Зачёркнутый текст виджетов событий и задач, которые выполнены */
-#event_complete_text {
+/*#event_complete_text {
     text-decoration: line-through;
-}
+}*/
 
 /* Стиль для всего виджета календаря */
 QCalendarWidget * {

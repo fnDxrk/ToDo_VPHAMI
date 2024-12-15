@@ -37,7 +37,7 @@ private slots:
     void showPlansPage();           // Слот для преключения на страницу calendar_page
     void showTasksPage();           // Слот для преключения на страницу tasks_page
     void showCalendar();            // Слот для отображения или скрытия календаря
-    void onEditFinished();          // Слот для завершения редактирования в поле ввода
-    void createNewEventWidget();    // Слот для создания нового виджета событий
+    // void onEditFinished();          // Слот для завершения редактирования в поле ввода
+    // void createNewEventWidget();    // Слот для создания нового виджета событий
 };
 #endif // MAINWINDOW_H
