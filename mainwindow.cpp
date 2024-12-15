@@ -20,8 +20,14 @@ MainWindow::MainWindow(QWidget *parent)
     // Создаём календарь
     calendarWidget = new QCalendarWidget(this);
     calendarWidget->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
-    calendarWidget->setVisible(false);
+    calendarWidget->setVisible(0);
     calendarWidget->setGeometry(1010, 98, 280, 280);
+
+    // Скрываем поле текста
+    ui->edit_text->setVisible(0);
+
+    // Подключаем сигнал завершения редактирования в поле ввода к слоту обработки завершения редактирования
+    connect(ui->edit_line, &QLineEdit::editingFinished, this, &MainWindow::onEditFinished);
 
     // Подключаем кнопку календаря к слоту отображения календаря
     connect(ui->calendar_button, &QPushButton::clicked, this, &MainWindow::showCalendar);
@@ -101,3 +107,11 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
     updateCalendarPosition();
     QWidget::resizeEvent(event);
 }
+
+// Слот для завершения редактирования в поле ввода
+void MainWindow::onEditFinished() {
+    ui->edit_line->setVisible(0);
+    ui->edit_text->setText(ui->edit_line->text());
+    ui->edit_text->setVisible(1);
+}
+

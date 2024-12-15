@@ -85,6 +85,11 @@
     background-color: transparent;
 }
 
+/* Фон элементов виджетов событий и задач, которые выполнены*/
+#today_page QLineEdit {
+    border:none;
+}
+
 /* Зачёркнутый текст виджетов событий и задач, которые выполнены */
 #event_complete_text {
     text-decoration: line-through;
