@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "eventwidget.h"
+#include "EventWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
