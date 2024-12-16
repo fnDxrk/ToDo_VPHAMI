@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "EventWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,30 +7,21 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Скрываем меню с иконками
-    showFullMenu();
+    calendarManager = new CalendarManager(this);
 
-    // Делаем по умолчанию страницу Today в меню
+    showFullMenu();
     ui->stackedWidget->setCurrentIndex(0);
     ui->full_menu_today_button->setChecked(true);
-
-    // Скрываем кнопку календаря
     ui->calendar_button->setVisible(0);
 
-    calendarManager = new CalendarManager(this);
     connect(ui->calendar_button, &QPushButton::clicked, calendarManager, &CalendarManager::toggleCalendarVisibility);
 
-    // Подключение сигналов и слотов для переключения меню
     connect(ui->icon_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showFullMenu);
     connect(ui->full_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showIconMenu);
-
-    // Подключаем сигналы кнопок к слоту переключения страниц
     connect(ui->icon_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
     connect(ui->full_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
-
     connect(ui->icon_menu_plans_button, &QPushButton::clicked, this, &MainWindow::showPlansPage);
     connect(ui->full_menu_plans_button, &QPushButton::clicked, this, &MainWindow::showPlansPage);
-
     connect(ui->icon_menu_tasks_button, &QPushButton::clicked, this, &MainWindow::showTasksPage);
     connect(ui->full_menu_tasks_button, &QPushButton::clicked, this, &MainWindow::showTasksPage);
 }
