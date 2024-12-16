@@ -24,16 +24,6 @@ MainWindow::MainWindow(QWidget *parent)
     calendarWidget->setVisible(0);
     calendarWidget->setGeometry(1010, 98, 280, 280);
 
-    // Скрываем поле текста
-    // ui->edit_text->setVisible(0);
-    // ui->edit_event_widget->hide();
-
-    //
-    // connect(ui->plus_button, &QPushButton::clicked, this, &MainWindow::createNewEventWidget);
-
-    // Подключаем сигнал завершения редактирования в поле ввода к слоту обработки завершения редактирования
-    // connect(ui->edit_line, &QLineEdit::editingFinished, this, &MainWindow::onEditFinished);
-
     // Подключаем кнопку календаря к слоту отображения календаря
     connect(ui->calendar_button, &QPushButton::clicked, this, &MainWindow::showCalendar);
 
@@ -112,36 +102,4 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
     updateCalendarPosition();
     QWidget::resizeEvent(event);
 }
-
-// Слот для завершения редактирования в поле ввода
-// void MainWindow::onEditFin   ished() {
-//     ui->edit_line->setVisible(0);
-//     ui->edit_text->setText(ui->edit_line->text());
-//     ui->edit_text->setVisible(1);
-// }
-
-// void MainWindow::createNewEventWidget() {
-//     // Создаем новый виджет
-//     QWidget *newWidget = new QWidget();
-
-//     // Создаем горизонтальный layout для размещения элементов в одной строке
-//     QHBoxLayout *layout = new QHBoxLayout();
-
-//     // Создаем поле для ввода текста (например, QLineEdit)
-//     QLineEdit *lineEdit = new QLineEdit();
-//     lineEdit->setPlaceholderText("Введите событие");
-
-//     // Создаем кнопку
-//     QPushButton *button = new QPushButton("Добавить событие");
-
-//     // Добавляем поле и кнопку в layout
-//     layout->addWidget(lineEdit);
-//     layout->addWidget(button);
-
-//     // Устанавливаем layout для нового виджета
-//     newWidget->setLayout(layout);
-
-//     // Добавляем новый виджет в today_page
-//     ui->today_page->layout()->addWidget(newWidget);
-// }
 
