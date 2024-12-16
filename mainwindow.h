@@ -33,8 +33,8 @@ private:
 private slots:
     void showFullMenu();
     void showIconMenu();
-    void showTodayPage();
-    void showPlansPage();
-    void showTasksPage();
+    // void showTodayPage();
+    // void showPlansPage();
+    // void showTasksPage();
 };
 #endif // MAINWINDOW_H
