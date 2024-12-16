@@ -7,6 +7,7 @@
 #include <QSpacerItem>
 #include <QLabel>
 #include <QLineEdit>
+#include <QIcon>
 
 class EventWidget : public QWidget
 {

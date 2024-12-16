@@ -21,4 +21,8 @@ EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
     layout->addWidget(lineEdit);
     layout->addSpacerItem(expandingSpacer);
     layout->addWidget(rightButton);
+
+    this->setFixedHeight(60);
 }
+
+void EventWidget::onEditFinished() {}
