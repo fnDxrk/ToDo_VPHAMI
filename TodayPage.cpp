@@ -16,6 +16,7 @@ TodayPage::TodayPage(QWidget *parent)
 
     spacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
     scrollLayout->addSpacerItem(spacer);
+    scrollLayout->setSpacing(20);
 
     QScrollArea *scrollArea = new QScrollArea(this);
     scrollArea->setWidget(scrollWidget);
