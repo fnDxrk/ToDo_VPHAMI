@@ -21,18 +21,20 @@ public:
     ~MainWindow();
 
 protected:
-    // Переопределяем resizeEvent для обработки изменения размера окна
     void resizeEvent(QResizeEvent *event) override;
 
 private:
     Ui::MainWindow *ui;
     CalendarManager *calendarManager;
 
+    void setupUI();
+    void connectSignalsAndSlots();
+
 private slots:
-    void showFullMenu();            // Слот для отображения full_menu_widget
-    void showIconMenu();            // Слот для отображения icom_menu_widget
-    void showTodayPage();           // Слот для преключения на страницу today_page
-    void showPlansPage();           // Слот для преключения на страницу calendar_page
-    void showTasksPage();           // Слот для преключения на страницу tasks_page
+    void showFullMenu();
+    void showIconMenu();
+    void showTodayPage();
+    void showPlansPage();
+    void showTasksPage();
 };
 #endif // MAINWINDOW_H
