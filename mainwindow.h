@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "CalendarManager.h"
+#include "TodayPage.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -26,6 +27,7 @@ protected:
 private:
     Ui::MainWindow *ui;
     CalendarManager *calendarManager;
+    TodayPage *todayPage;
 
     void setupUI();
     void connectSignalsAndSlots();
@@ -33,7 +35,7 @@ private:
 private slots:
     void showFullMenu();
     void showIconMenu();
-    // void showTodayPage();
+    void showTodayPage();
     // void showPlansPage();
     // void showTasksPage();
 };

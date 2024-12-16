@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
     setupUI();
 
     calendarManager = new CalendarManager(this);
+    todayPage = new TodayPage(this);
+
+    ui->stackedWidget->addWidget(todayPage);
 
     connectSignalsAndSlots();
 }
@@ -30,8 +33,8 @@ void MainWindow::connectSignalsAndSlots() {
     connect(ui->calendar_button, &QPushButton::clicked, calendarManager, &CalendarManager::toggleCalendarVisibility);
     connect(ui->icon_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showFullMenu);
     connect(ui->full_menu_toggle_button, &QPushButton::clicked, this, &MainWindow::showIconMenu);
-    // connect(ui->icon_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
-    // connect(ui->full_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
+    connect(ui->icon_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
+    connect(ui->full_menu_today_button, &QPushButton::clicked, this, &MainWindow::showTodayPage);
     // connect(ui->icon_menu_plans_button, &QPushButton::clicked, this, &MainWindow::showPlansPage);
     // connect(ui->full_menu_plans_button, &QPushButton::clicked, this, &MainWindow::showPlansPage);
     // connect(ui->icon_menu_tasks_button, &QPushButton::clicked, this, &MainWindow::showTasksPage);
@@ -54,11 +57,11 @@ void MainWindow::showIconMenu() {
     ui->icon_menu_widget->setVisible(true);
 }
 
-// void MainWindow::showTodayPage() {
-//     ui->stackedWidget->setCurrentWidget(ui->today_page);
-//     ui->calendar_button->setVisible(false);
-//     ui->title_text->setContentsMargins(0, 0, 0, 0);
-// }
+void MainWindow::showTodayPage() {
+    ui->stackedWidget->setCurrentWidget(todayPage);
+    ui->calendar_button->setVisible(false);
+    ui->title_text->setContentsMargins(0, 0, 0, 0);
+}
 
 // void MainWindow::showPlansPage() {
 //     ui->stackedWidget->setCurrentWidget(ui->plans_page);
