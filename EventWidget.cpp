@@ -61,12 +61,18 @@ bool EventWidget::isEditing() const
 
 void EventWidget::onRightButtonClicked()
 {
-    if (isEditing()) {
-        contextMenu->showMenu(QCursor::pos(), false);
-    } else {
-        contextMenu->showMenu(QCursor::pos(), true);
-    }
+    QPoint menuPos = QCursor::pos();
+    bool showRename = !isEditing();
+
+    contextMenu->showMenu(menuPos, showRename);
+
+    QSize menuSize = contextMenu->sizeHint();
+    QPoint adjustedPos = menuPos - QPoint(menuSize.width(), 0);
+
+    contextMenu->showMenu(adjustedPos, showRename);
 }
+
+
 
 void EventWidget::onRenameAction()
 {

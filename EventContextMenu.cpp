@@ -20,5 +20,5 @@ void EventContextMenu::showMenu(const QPoint &pos, bool showRename)
         renameAction->setVisible(false);
     }
 
-    exec(pos);
+    popup(pos);
 }
