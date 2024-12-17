@@ -22,7 +22,6 @@ EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
     rightButton = new QPushButton(this);
     rightButton->setIcon(QIcon(":/resource/icons/Options.png"));
     rightButton->setIconSize(QSize(20,20));
-    rightButton->hide();
 
     QHBoxLayout* layout = new QHBoxLayout(this);
     layout->setContentsMargins(20, 0, 20, 0);
