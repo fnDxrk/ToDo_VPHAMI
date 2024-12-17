@@ -82,6 +82,29 @@ QScrollArea QWidget{
     background-color: transparent;
 }
 
+#stackedWidget EventContextMenu {
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+#stackedWidget EventContextMenu::item {
+    background-color: #ffffff;
+}
+
+#stackedWidget EventContextMenu::item:selected {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*#stackedWidget QAction {
+    background-color: #ffffff;
+}
+
+#stackedWidget QAction:hover {
+    background-color: #000000;
+    color: #ffffff;
+}*/
+
 #stackedWidget QLineEdit {
     border: none;
 }
