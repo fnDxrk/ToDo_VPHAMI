@@ -28,6 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         AddEventWidget.h AddEventWidget.cpp
         CalendarManager.h CalendarManager.cpp
         TodayPage.h TodayPage.cpp
+        EventWidget.h EventWidget.cpp
 
 
     )

@@ -6,7 +6,6 @@
 #include <QPushButton>
 #include <QSpacerItem>
 #include <QLabel>
-#include <QLineEdit>
 #include <QIcon>
 
 class AddEventWidget : public QWidget
