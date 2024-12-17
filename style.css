@@ -72,11 +72,11 @@ QScrollArea QWidget{
     margin: 0 30px 0 30px;
 }
 
-#stackedWidget EventWidget {
+#stackedWidget AddEventWidget {
     background-color: #ffffff;
 }
 
-#stackedWidget EventWidget * {
+#stackedWidget AddEventWidget * {
     background-color: transparent;
 }
 
