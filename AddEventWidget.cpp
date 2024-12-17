@@ -19,4 +19,6 @@ AddEventWidget::AddEventWidget(QWidget *parent) : QWidget(parent)
     layout->addSpacerItem(fixedSpacer);
     layout->addWidget(label);
     layout->addSpacerItem(expandingSpacer);
+
+    connect(leftButton, &QPushButton::clicked, this, &AddEventWidget::leftButtonClicked);
 }

@@ -7,10 +7,12 @@ TodayPage::TodayPage(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout(this);
 
     QWidget *scrollWidget = new QWidget(this);
-    QVBoxLayout *scrollLayout = new QVBoxLayout(scrollWidget);
+    scrollLayout = new QVBoxLayout(scrollWidget);
 
-    AddEventWidget *item = new AddEventWidget(this);
-    scrollLayout->addWidget(item);
+    AddEventWidget *addEventItem = new AddEventWidget(this);
+    scrollLayout->addWidget(addEventItem);
+
+    connect(addEventItem, &AddEventWidget::leftButtonClicked, this, &TodayPage::addEventWidget);
 
     spacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
     scrollLayout->addSpacerItem(spacer);
@@ -27,3 +29,11 @@ TodayPage::TodayPage(QWidget *parent)
 }
 
 TodayPage::~TodayPage() {}
+
+void TodayPage::addEventWidget()
+{
+    scrollLayout->removeItem(spacer);
+    EventWidget *eventItem = new EventWidget(this);
+    scrollLayout->insertWidget(0, eventItem);
+    scrollLayout->addSpacerItem(spacer);
+}

@@ -14,6 +14,9 @@ class AddEventWidget : public QWidget
 public:
     explicit AddEventWidget(QWidget *parent = nullptr);
 
+signals:
+    void leftButtonClicked();
+
 private:
     QPushButton *leftButton;
     QSpacerItem *fixedSpacer;
