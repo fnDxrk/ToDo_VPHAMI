@@ -15,7 +15,7 @@ EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
     label->hide();
 
     labelEdit = new QLineEdit(this);
-    labelEdit->setPlaceholderText("Введите текст здесь...");
+    labelEdit->setPlaceholderText("Введите текст...");
 
     expandingSpacer = new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -44,5 +44,6 @@ void EventWidget::onEditingFinished()
         label->setText(text);
         label->show();
         labelEdit->hide();
+        rightButton->show();
     }
 }
