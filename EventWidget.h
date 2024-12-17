@@ -14,6 +14,7 @@ class EventWidget : public QWidget
     Q_OBJECT
 public:
     explicit EventWidget(QWidget *parent = nullptr);
+    bool isEditing() const;
 
 private:
     QPushButton *leftButton;

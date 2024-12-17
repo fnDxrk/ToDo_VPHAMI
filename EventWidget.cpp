@@ -47,3 +47,8 @@ void EventWidget::onEditingFinished()
         rightButton->show();
     }
 }
+
+bool EventWidget::isEditing() const
+{
+    return labelEdit->isVisible();
+}

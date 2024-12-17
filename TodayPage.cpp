@@ -32,6 +32,15 @@ TodayPage::~TodayPage() {}
 
 void TodayPage::addEventWidget()
 {
+    for (int i = 0; i < scrollLayout->count(); ++i) {
+        QLayoutItem *item = scrollLayout->itemAt(i);
+        QWidget *widget = item ? item->widget() : nullptr;
+        EventWidget *eventWidget = qobject_cast<EventWidget*>(widget);
+        if (eventWidget && eventWidget->isEditing()) {
+            return;
+        }
+    }
+
     scrollLayout->removeItem(spacer);
     EventWidget *eventItem = new EventWidget(this);
     scrollLayout->insertWidget(0, eventItem);
