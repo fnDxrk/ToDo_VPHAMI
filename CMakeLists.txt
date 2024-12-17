@@ -25,11 +25,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         resource.qrc
-        EventWidget.h EventWidget.cpp
+        AddEventWidget.h AddEventWidget.cpp
         CalendarManager.h CalendarManager.cpp
         TodayPage.h TodayPage.cpp
-        PlansPage.h PlansPage.cpp
-        TasksPage.h TasksPage.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ToDo_VPHAMI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "EventWidget.h"
+#include "AddEventWidget.h"
 
 class TodayPage : public QWidget
 {
