@@ -23,6 +23,8 @@ EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
     rightButton->setIcon(QIcon(":/resource/icons/Options.png"));
     rightButton->setIconSize(QSize(20,20));
 
+    contextMenu = new EventContextMenu(this);
+
     QHBoxLayout* layout = new QHBoxLayout(this);
     layout->setContentsMargins(20, 0, 20, 0);
 
@@ -32,6 +34,11 @@ EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
     layout->addWidget(label);
     layout->addSpacerItem(expandingSpacer);
     layout->addWidget(rightButton);
+
+    connect(contextMenu, &EventContextMenu::renameRequested, this, &EventWidget::onRenameAction);
+    connect(contextMenu, &EventContextMenu::deleteRequested, this, &EventWidget::onDeleteAction);
+
+    connect(rightButton, &QPushButton::clicked, this, &EventWidget::onRightButtonClicked);
 
     connect(labelEdit, &QLineEdit::editingFinished, this, &EventWidget::onEditingFinished);
 }
@@ -50,4 +57,26 @@ void EventWidget::onEditingFinished()
 bool EventWidget::isEditing() const
 {
     return labelEdit->isVisible();
+}
+
+void EventWidget::onRightButtonClicked()
+{
+    if (isEditing()) {
+        contextMenu->showMenu(QCursor::pos(), false);
+    } else {
+        contextMenu->showMenu(QCursor::pos(), true);
+    }
+}
+
+void EventWidget::onRenameAction()
+{
+    label->hide();
+    labelEdit->setText(label->text());
+    labelEdit->show();
+    labelEdit->setFocus();
+}
+
+void EventWidget::onDeleteAction()
+{
+    this->deleteLater();
 }

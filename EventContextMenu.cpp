@@ -12,7 +12,13 @@ EventContextMenu::EventContextMenu(QWidget *parent) : QMenu(parent)
     connect(deleteAction, &QAction::triggered, this, &EventContextMenu::deleteRequested);
 }
 
-void EventContextMenu::showMenu(const QPoint &pos)
+void EventContextMenu::showMenu(const QPoint &pos, bool showRename)
 {
+    if (showRename) {
+        renameAction->setVisible(true);
+    } else {
+        renameAction->setVisible(false);
+    }
+
     exec(pos);
 }

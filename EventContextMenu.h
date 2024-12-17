@@ -9,7 +9,7 @@ class EventContextMenu : public QMenu
     Q_OBJECT
 public:
     explicit EventContextMenu(QWidget *parent = nullptr);
-    void showMenu(const QPoint &pos);
+    void showMenu(const QPoint &pos, bool showRename);
 
 signals:
     void renameRequested();

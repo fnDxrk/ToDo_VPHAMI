@@ -9,6 +9,8 @@
 #include <QLineEdit>
 #include <QIcon>
 
+#include "EventContextMenu.h"
+
 class EventWidget : public QWidget
 {
     Q_OBJECT
@@ -23,9 +25,13 @@ private:
     QLineEdit *labelEdit;
     QSpacerItem *expandingSpacer;
     QPushButton *rightButton;
+    EventContextMenu *contextMenu;
 
 private slots:
     void onEditingFinished();
+    void onRightButtonClicked();
+    void onRenameAction();
+    void onDeleteAction();
 };
 
 #endif // EVENTWIDGET_H
