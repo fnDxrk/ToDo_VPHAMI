@@ -72,12 +72,18 @@ QScrollArea QWidget{
     margin: 0 30px 0 30px;
 }
 
-#stackedWidget AddEventWidget {
+#stackedWidget AddEventWidget,
+#stackedWidget EventWidget {
     background-color: #ffffff;
 }
 
-#stackedWidget AddEventWidget * {
+#stackedWidget AddEventWidget *,
+#stackedWidget EventWidget * {
     background-color: transparent;
+}
+
+#stackedWidget QLineEdit {
+    border: none;
 }
 
 /* Фон виджетов событий и задач, которые выполнены*/
