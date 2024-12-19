@@ -26,12 +26,14 @@ private:
     QSpacerItem *expandingSpacer;
     QPushButton *rightButton;
     EventContextMenu *contextMenu;
+    bool isCompleted;
 
 private slots:
     void onEditingFinished();
     void onRightButtonClicked();
     void onRenameAction();
     void onDeleteAction();
+    void onLeftButtonClicked();
 };
 
 #endif // EVENTWIDGET_H

@@ -1,6 +1,6 @@
 #include "EventWidget.h"
 
-EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
+EventWidget::EventWidget(QWidget *parent) : QWidget(parent), isCompleted(false)
 {
     setAttribute(Qt::WA_StyledBackground, true);
     this->setFixedHeight(60);
@@ -38,6 +38,7 @@ EventWidget::EventWidget(QWidget *parent) : QWidget(parent)
     connect(contextMenu, &EventContextMenu::renameRequested, this, &EventWidget::onRenameAction);
     connect(contextMenu, &EventContextMenu::deleteRequested, this, &EventWidget::onDeleteAction);
 
+    connect(leftButton, &QPushButton::clicked, this, &EventWidget::onLeftButtonClicked);
     connect(rightButton, &QPushButton::clicked, this, &EventWidget::onRightButtonClicked);
 
     connect(labelEdit, &QLineEdit::editingFinished, this, &EventWidget::onEditingFinished);
@@ -72,7 +73,16 @@ void EventWidget::onRightButtonClicked()
     contextMenu->showMenu(adjustedPos, showRename);
 }
 
+void EventWidget::onLeftButtonClicked()
+{
+    isCompleted = !isCompleted;
 
+    if (isCompleted) {
+        leftButton->setIcon(QIcon(":/resource/icons/Complete.png"));
+    } else {
+        leftButton->setIcon(QIcon(":/resource/icons/Circle.png"));
+    }
+}
 
 void EventWidget::onRenameAction()
 {
