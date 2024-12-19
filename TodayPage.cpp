@@ -12,6 +12,10 @@ TodayPage::TodayPage(QWidget *parent)
     AddEventWidget *addEventItem = new AddEventWidget(this);
     scrollLayout->addWidget(addEventItem);
 
+    eventListWidget = new EventListWidget(this);
+    eventListWidget->addEventWidget(new EventWidget(this));
+    scrollLayout->addWidget(eventListWidget);
+
     connect(addEventItem, &AddEventWidget::leftButtonClicked, this, &TodayPage::addEventWidget);
 
     spacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
@@ -45,4 +49,16 @@ void TodayPage::addEventWidget()
     EventWidget *eventItem = new EventWidget(this);
     scrollLayout->insertWidget(0, eventItem);
     scrollLayout->addSpacerItem(spacer);
+}
+
+void TodayPage::handleEventCompleted(EventWidget *widget)
+{
+    if (!widget) return;
+
+    scrollLayout->removeWidget(widget);
+    widget->setParent(nullptr);
+
+    eventListWidget->addEventWidget(widget);
+
+    qDebug() << "Задача перемещена в список выполненных";
 }

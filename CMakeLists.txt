@@ -30,6 +30,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         TodayPage.h TodayPage.cpp
         EventWidget.h EventWidget.cpp
         EventContextMenu.cpp EventContextMenu.h
+        EventListWidget.h EventListWidget.cpp
 
 
     )

@@ -5,6 +5,7 @@
 
 #include "AddEventWidget.h"
 #include "EventWidget.h"
+#include "EventListWidget.h"
 
 class TodayPage : public QWidget
 {
@@ -17,9 +18,11 @@ public:
 private:
     QVBoxLayout *scrollLayout;
     QSpacerItem *spacer;
+    EventListWidget *eventListWidget;
 
 private slots:
     void addEventWidget();
+    void handleEventCompleted(EventWidget *widget);
 };
 
 #endif // TODAYPAGE_H
