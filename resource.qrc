@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>icons/Calendar.png</file>
+        <file>icons/Menu.png</file>
+        <file>icons/Sun.png</file>
+        <file>icons/Tasks.png</file>
+        <file>style.css</file>
+        <file>icons/Circle.png</file>
+        <file>icons/Complete.png</file>
+        <file>icons/Plus.png</file>
+        <file>icons/Options.png</file>
+        <file>icons/Arrow_right.png</file>
+        <file>icons/Trash.png</file>
+        <file>icons/Arrow_down.png</file>
+        <file>icons/Arrow_up.png</file>
+        <file>icons/Arrow_l.png</file>
+        <file>icons/Arrow_r.png</file>
+    </qresource>
+</RCC>
